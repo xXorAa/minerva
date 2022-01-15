@@ -18,5 +18,6 @@ dd_mdv
         dc.w    md_formt-*
         dc.l    md_end          length of definition block
         dc.w    3,'MDV'         microdrive device name
+        dc.w    65535           padding to prevent mdv routine moving
 
         end

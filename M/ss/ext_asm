@@ -34,7 +34,7 @@ ss_ext          ;               user routine to call on shift/ctrl/alt/enter
         ;       freeze screen   ctrl/alt/tab            ctrl/f5
         ;       caps lock       shift/ctrl/enter        caps lock
 
-        dc.w    '1.98',4,'JSL1'
+        dc.w    '1.98',4,'JSL1','a1'
 *       dc.w    0,0,0           reserved
 
         end

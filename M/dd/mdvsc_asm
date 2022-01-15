@@ -180,7 +180,8 @@ go_noen
         bclr    d5,bitmap(a0,d7.w) mark sector found
         rol.l   #3,d7           restore block number
 
-        move.w  #blksize,d0     full block normally
+        moveq   #blksize/8,d0   full block normally
+        lsl.l    #3,d0
         cmp.b   lstblok(a0),d7  is it the last file block?
         bne.s   not_last        no - copy to end of it
         move.w  lstbyte(a0),d0  get the number of bytes in last block
